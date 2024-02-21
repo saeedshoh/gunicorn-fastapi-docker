@@ -2,9 +2,11 @@ services:
   api:
     build:
       context: .
-    container_name: fastapi1
+    container_name: fastapi2
+    environment:
+      PORT: 8002
     ports:
-      - '8000:8000'
+      - '8002:8000'
     restart: "no"
     volumes:
       - ./app:/app 
